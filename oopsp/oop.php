@@ -207,27 +207,43 @@
         function paint();
     }
 
+    interface Decoratable 
+    {
+        function decorate();
+    }
+
     /**
      * actual project
      */
-    class ArchiHouse extends HouseBase implements Paintable
+    class ArchiHouse extends HouseBase implements Paintable, Decoratable
     {
         public $paint;
+        public $decorate;
 
-        function __construct($material, $levels, $paint)
+        function __construct($material, $levels, $paint, $decorate)
         {
             parent::__construct($material, $levels);
             $this->paint = $paint;
+            $this->decorate = $decorate;
         }
         function paint()
         {
             echo "And we decide to paint it in {$this->paint} color";
         }
+
+        function decorate()
+        {
+            echo "And we will also add decratable {$this->decorate}";
+        }
     }
 
-    $archiHouse = new ArchiHouse('brick', 2, 'yellow');
-    $archiHouse->build();
-    $archiHouse->paint();
+    $archiHouse = new ArchiHouse('brick', 2, 'yellow', 'Flowers');
+        $archiHouse->build();
+        // we need to check if the class in iherited from the interface 
+    if ($archiHouse instanceof Paintable && $archiHouse instanceof Decoratable) {
+        $archiHouse->paint();
+        $archiHouse->decorate();
+    }
 
 
 
