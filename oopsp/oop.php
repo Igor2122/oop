@@ -98,29 +98,152 @@
 */
 
 // Abstract Classes
-abstract class HouseAbstract 
-{
-    public $model = "";
-    public $square;
-    public $floors;
-    
-    function __construct($model, $square = 0, $floors = 1)
+/*
+    abstract class HouseAbstract 
     {
+        public $model = "";
+        public $square;
+        public $floors;
         
+        function __construct($model, $square = 0, $floors = 1)
+        {
+            $this->model = $model;
+            $this->square = $square;
+            $this->floors = $floors;
+        }
+        
+        function startProject ()
+        {
+            echo "Start. Model: {$this->model}";
+        }
+        
+        function stopProject ()
+        {
+            echo "Stop Project: {$this->model}";
+        }
+        // they have to atlest reload this method while instantiating a new class and we do not need {} here
+        abstract function build();
     }
-    
-    function startProject ()
-    {
-        echo "Start. Model: {$this->model}";
-    }
-    
-    function stopProject ()
-    {
-        echo "Stop Project: {$this->model}";
-    }
-}
 
-// $house = new HouseAbstract("1", "2","3"); - will throw an error as this is an abastact class
+
+ 
+ 
+    class BasicHouse extends HouseAbstract
+    {
+        public $paint = '';
+
+        function __construct($model, $square, $floors, $paint)
+        {
+            parent::__construct($model, $square, $floors);
+            
+            $this->paint = $paint;
+        }
+
+
+        function build()
+        { 
+            echo "The House model : {$this->model} 
+            it will be {$this->square} * {$this->floors} wide 
+            and will be painted in {$this->paint}";
+        }
+    }
+
+    $basicHouse = new BasicHouse('122-33-02', 5 , 2, 'yellow');
+    $basicHouse->build();
+*/
+
+// INTERFACE - only can contain abastract methods no declarations at all 
+// EXAMPLE ONE 
+    interface Base 
+    {
+        function connectToDb();
+        function disconnectDB();
+    }
+
+    /**
+     * 
+     */
+    class Connect implements Base
+    {
+        function connectToDb()
+        {
+            echo "I am connceted";
+        }
+        function disconnectDB()
+        {
+            echo "I am disconnected";
+        }
+
+    }
+
+        $connect = new Connect();
+        $connect->connectToDb();
+        $connect->disconnectDB();
+
+
+    // EXAMPLE 2 
+    /**
+     * Basic house
+     */
+    class HouseBase
+    {
+        public $material;
+        public $levels;
+
+        function __construct($material, $levels)
+        {
+            $this->material = $material;
+            $this->levels = $levels;
+        }
+
+        function build()
+        {
+            echo "The house will be made of {$this->material} and will have {$this->levels} number of levels by architect";
+        }
+    }
+
+    interface Paintable
+    {
+        function paint();
+    }
+
+    /**
+     * actual project
+     */
+    class ArchiHouse extends HouseBase implements Paintable
+    {
+        public $paint;
+
+        function __construct($material, $levels, $paint)
+        {
+            parent::__construct($material, $levels);
+            $this->paint = $paint;
+        }
+        function paint()
+        {
+            echo "And we decide to paint it in {$this->paint} color";
+        }
+    }
+
+    $archiHouse = new ArchiHouse('brick', 2, 'yellow');
+    $archiHouse->build();
+    $archiHouse->paint();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
 
