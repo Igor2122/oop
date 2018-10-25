@@ -18,9 +18,7 @@ class Pet
     {
         echo "<hr>";
     }
-    
-    // psudo contants __CLASS__ __METHOD__
-    
+        
     function __construct($name, $type)
     {
         $this->name = $name;
@@ -40,10 +38,4 @@ $dog = new Pet("Shitzy", "dog");
 $dog->says("woof-woof");
 
 
-
-// $dog->type = "dog";
-// $dog->name = 'Barsik';
-
-// $cat->sayName('meaw');
-// $dog->sayName('woof');
 
