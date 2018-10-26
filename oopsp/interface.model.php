@@ -6,7 +6,7 @@ interface Car
 	function startEngine();
 	function stopEngine();
 	function start();
-	function stop()
+	function stop();
 }
 
 /**
@@ -14,21 +14,21 @@ interface Car
  */
 class Route
 {
-	$car;
+	public $car;
+	public $lightGreen = true;
 	function __construct(Car $car)//can only except objects extended from car 
 	{
 		$this->car = $car;
 	}
+
 	function drive()
 	{
 		$this->car->startEngine();
 		$this->car->start();
 	}
-
-	if (!$lightGreen) {
-		$this->car->stop(); // car will stop to wait for green light;
-	}
-	while(!$lightGreen){
-		$this->car->start();
-	}
+	
+	// if (!$lightGreen) {
+	// 	$this->car->stop(); // car will stop to wait for green light;
+	// }
+	
 }

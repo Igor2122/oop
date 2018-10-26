@@ -15,67 +15,7 @@
 // Createing inheritance on Object
 /*
 
-    class User 
-    {
-        public $name;
-        public $login;
-        public $password;
-        
-        function __construct ($n, $l, $pssrd){
-            
-            $this->name = $n;
-            $this->login = $l;
-            $this->password = $pssrd;
-        }
-    
-    function showInfo()
-    {
-        $this->hr();
-        echo "User Name: {$this->name}";
-        $this->hr();
-        echo "User Login: {$this->login}";
-        $this->hr();
-        echo "User Password: {$this->password}";
-        $this->hr();
-    }
-    
-    function hr()
-    {
-        echo "<hr>";
-    }
-    }
 
-
-    class SuperUser extends User
-    {
-        public $role;
-        
-        function __construct($n, $l, $pssrd, $pos)
-        {
-            parent::__construct($n, $l, $pssrd);
-            $this->role = $pos;
-        }
-        
-        function showInfo()
-        {
-            parent::showInfo();
-            echo "Position: {$this->role}";
-        }
-        
-    }
-
-    $igor = new User("Igor", "ig", 123);
-    $igor->showInfo();
-    echo "<br>";
-
-    $reem = new User("Reem", "rm", 1234);
-    $reem->showInfo();
-    echo "<br>";
-
-
-    $archie = new SuperUser("Archie", "arch", 1234, "admin");
-    $archie->showInfo();
-*/
 
 // try and catch 
 /* 
