@@ -179,6 +179,7 @@
 
     $archiHouse = new ArchiHouse('brick', 2, 'yellow', 'Flowers');
         $archiHouse->build();
+        
         // we need to check if the class in iherited from the interface 
     if ($archiHouse instanceof Paintable && $archiHouse instanceof Decoratable) {
         $archiHouse->paint();

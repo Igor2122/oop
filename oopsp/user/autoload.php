@@ -1,15 +1,18 @@
 <?php 
 
-
 spl_autoload_register(function($class)
 {
    $filename =  $class . '.class.php';
-
+   include $filename;
+   
+   
+   
    // if (!file_exists($filename)) {
    //    return false; 
+   // } else {
+
    // }
 
-   include 'baseClasses/'. $filename;
 
    // while (!file_exists($filename)) {
    //    echo 'Sorry file not found';
