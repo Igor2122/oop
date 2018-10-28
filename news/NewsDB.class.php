@@ -1,6 +1,6 @@
 <?php
 
-require 'INewsDB.class.php';
+require_once 'INewsDB.class.php';
 
 
 
@@ -8,8 +8,7 @@ class NewsDB implements INewsDB
 {
     const DB_NAME = '../news.db';
     
-    private $_db;
-    // in case if we need to use above for 
+    private $_db = null;
     function __get($name)
     {
         if($name == "db")
@@ -24,8 +23,9 @@ class NewsDB implements INewsDB
     function __construct ()
     {
         if(is_file(self::DB_NAME)){
-            $this->_db = new SQLite3(self::DB_NAME); // getting the DB_NAME through self:: same as $this 
+            $this->_db = new SQLite3(self::DB_NAME);
         }  else {
+            // creating new DB with the cost name through self::
             $this->_db = new SQLite3(self::DB_NAME); 
             $sql = "CREATE TABLE msgs(
                 	id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -60,6 +60,7 @@ class NewsDB implements INewsDB
 }
 
 
+$news = new NewsDB();
 
 
 
