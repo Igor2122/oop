@@ -1,1 +1,65 @@
 <?php
+
+require 'INewsDB.class.php';
+
+
+
+class NewsDB implements INewsDB
+{
+    const DB_NAME = '../news.db';
+    
+    private $_db;
+    // in case if we need to use above for 
+    function __get($name)
+    {
+        if($name == "db")
+        {
+            return $this->_db;
+        } else 
+        {
+            throw new Exception("Unknown Properties !");
+        }
+    }   
+    
+    function __construct ()
+    {
+        if(is_file(self::DB_NAME)){
+            $this->_db = new SQLite3(self::DB_NAME); // getting the DB_NAME through self:: same as $this 
+        }  else {
+            $this->_db = new SQLite3(self::DB_NAME); 
+            $sql = "CREATE TABLE msgs(
+                	id INTEGER PRIMARY KEY AUTOINCREMENT,
+                	title TEXT,
+                	category INTEGER,
+                	description TEXT,
+                	source TEXT,
+                	datetime INTEGER
+                    )";
+        }
+    }
+    
+    function __destruct ()
+    {
+        unset($this->_db);
+    }
+    
+    function saveNews($title, $category, $description, $source)
+    {
+        
+    }
+    
+    function getNews()
+    {
+        
+    }
+    
+    function deleteNews($id)
+    {
+        
+    }
+}
+
+
+
+
+

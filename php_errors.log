@@ -1,3 +1,4 @@
 [23-Oct-2018 10:21:40 UTC] PHP Fatal error:  Call to a member function showInfo() on a non-object in /home/ubuntu/workspace/oopsp/oop.php on line 54
 [23-Oct-2018 10:21:40 UTC] PHP Stack trace:
 [23-Oct-2018 10:21:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/oopsp/oop.php:0
+[28-Oct-2018 11:59:43 UTC] PHP Parse error:  syntax error, unexpected '{', expecting function (T_FUNCTION) in /home/ubuntu/workspace/news/NewsDB.class.php on line 45
