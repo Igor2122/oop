@@ -95,5 +95,5 @@ class NewsDB implements INewsDB
 
 
 
-
+$new = new NewsDB();
 
