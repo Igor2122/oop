@@ -3,19 +3,21 @@
     include_once '../inc/_header.php';
     include_once '../inc/_nav.php';
 
+    $message = "";
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        echo $_POST["recName"];
-        echo $_POST["ingridients"];
-        echo $_POST["directions"];
-    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        require "../classes/saveNews.class.php";
+        $errMsg = "Data saved";
+      }
+
 ?>
           
 
 
     <div class="container-fluid mt-md-5">
         <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
@@ -106,7 +108,7 @@
             </div>
           </div>
           
-          
+        <?= $message ?>
         <!-- Recepie input form -->
         <div class="container w-75">
           <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
