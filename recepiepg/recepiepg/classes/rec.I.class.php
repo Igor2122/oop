@@ -3,7 +3,7 @@
 
 interface RecDBIntrface 
 {
-    function saveRec($name, $ingrd, $dir);
+    function saveRec( $category, $recName, $ingridients, $direction);
     function getRec();
     function delRec();
 }

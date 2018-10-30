@@ -3,19 +3,21 @@
     include_once '../inc/_header.php';
     include_once '../inc/_nav.php';
 
+    require_once '../classes/rec.calss.php';
+
     $message = "";
 
+    $recp = new RecDB ();
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        require "../classes/saveNews.class.php";
-        $errMsg = "Data saved";
-      }
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+       require '../classes/SaveRec.class.php';
+    }
 
 ?>
           
 
 
-    <div class="container-fluid mt-md-5">
+    <div class="container-fluid">
         <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
@@ -94,7 +96,7 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
@@ -108,14 +110,26 @@
             </div>
           </div>
           
-        <?= $message ?>
+        <?php  
+          if($message)
+            echo $message;
+        ?>
         <!-- Recepie input form -->
         <div class="container w-75">
           <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
               <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select name="category" class="form-control" id="exampleFormControlSelect1">
+                  <option value="1">MainCourse</option>
+                  <option value="1">Apetizer</option>
+                  <option value="1">Dessert</option>
+                </select>
+              </div>  
+              <div class="form-group">
                   <label for="usr">Name:</label>
                   <input name="recName" type="text" class="form-control" id="usr">
               </div>
+              
               <div class="form-group">
                   <label for="comment">Ingridients:</label>
                   <textarea name="ingridients" class="form-control" rows="5" id="comment" name="text"></textarea>
@@ -132,7 +146,7 @@
           </form>
          </div>
          
-         
+        <?= $message ?>
         <h2>Section title</h2>
             <div class="table-responsive">
             <table class="table table-striped table-sm">
