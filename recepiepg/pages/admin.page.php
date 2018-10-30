@@ -113,6 +113,13 @@
         <?php  
           if($message)
             echo $message;
+
+          $recp = new RecDB();        
+          $posts = $recp->getRec();
+
+          foreach($posts as $post){
+            echo $post['recName'];
+          }
         ?>
         <!-- Recepie input form -->
         <div class="container w-75">
@@ -145,16 +152,9 @@
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>
          </div>
-         <?php 
-         $recp = new RecDB();        
-          $posts = $recp->getRec();
-          // print_r($posts);
-          foreach($posts as $post){
-            echo $post['recName'];
-            echo 'hello';
-          };
          
-         ?>
+
+
         <?= $message ?>
         <h2>Section title</h2>
             <div class="table-responsive">
@@ -184,4 +184,4 @@
       </div>
     </div>
 
-<?php include_once '../inc/_footer.php'?>
+<?php include_once '../inc/_footer.php';?>

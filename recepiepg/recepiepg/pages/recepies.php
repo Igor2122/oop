@@ -1,9 +1,13 @@
-<?php include_once 'inc/_header.php'?>
+<?php 
+  include_once '../inc/_header.php';
+  include_once '../inc/_nav.php';
 
-    <header>
-      <?php include_once 'inc/_nav.php'?>
-      
-      
+  require_once '../classes/rec.calss.php';
+
+
+  $result = new RecDB ();        
+?>
+ 
     <main role="main">
 
       <section class="jumbotron text-center">
@@ -19,14 +23,23 @@
 
       <div class="album py-5 bg-light">
         <div class="container">
-      <?php 
-        require 'classes/rec.calss.php';
+        <?php 
+
+        $exem[] = [1,2,3,4];
+
+        $posts = $result->getRec();
+        print_r($exem, true);
+
+
+        foreach($exem as $post){
+          // echo $post['1'];
+        }
+        foreach($posts as $post){
+          echo $post['recName'];
+        }
         
-        
-          
-          
-        
-      ?>
+         
+         ?>
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
@@ -171,5 +184,5 @@
 
     </main>
 
-    <?php include_once 'inc/_footer.php' ?>
+<?php include_once '../inc/_footer.php';?>
 
