@@ -13,7 +13,6 @@ class RecDB implements RecDBIntrface
         $this->_db = new SQLite3(self::DB_NAME); 
         
         if(filesize(self::DB_NAME) == 0){
-            $this->_db = new SQLite3(self::DB_NAME);
                 $sql = "CREATE TABLE resps(
                     	id INTEGER PRIMARY KEY AUTOINCREMENT,
                     	recName TEXT,
@@ -23,34 +22,21 @@ class RecDB implements RecDBIntrface
                     	datetime INTEGER
                         )";
                 $this->_db->exec($sql) or die ($this->_db->lastErrorMsg());
+
+                $sql  = "CREATE TABLE category(
+                            id INTEGER,
+                            name TEXT
+                        )";
                 
-                $sql  = "CREATE TABLE categ(
-                        id INTEGER,
-                        name TEXT
-                )";
-            
                 $this->_db->exec($sql) or die ($this->_db->lastErrorMsg());
-    
-                $sql  = "INSERT INTO categ(id, name)
-                        SELECT 1 as id, 'MainCourse' as name
-                        UNION SELECT 2 as id, 'Apetizer' as name
-                        UNION SELECT 3 as id, 'Dessert' as name ";
-                $this->_db->exec($sql) or die ($this->_db->lastErrorMsg());
-            
-            $sql  = "CREATE TABLE category(
-                        id INTEGER,
-                        name TEXT
-                )";
-                
-            $this->_db->exec($sql) or die ($this->_db->lastErrorMsg());
-    
-                $sql  = "INSERT INTO category(id, name)
-                        SELECT 1 as id, 'Politics' as name
-                        UNION SELECT 2 as id, 'Culture' as name
-                        UNION SELECT 3 as id, 'Sport' as name ";
-            $this->_db->exec($sql) or die ($this->_db->lastErrorMsg());
         
-            }
+                    $sql  = "INSERT INTO category(id, name)
+                            SELECT 1 as id, 'Politics' as name
+                            UNION SELECT 2 as id, 'Culture' as name
+                            UNION SELECT 3 as id, 'Sport' as name ";
+                $this->_db->exec($sql) or die ($this->_db->lastErrorMsg());
+            
+                }
     }
     
     
@@ -64,17 +50,32 @@ class RecDB implements RecDBIntrface
         
     }
     
+    function db2arr ($data){
+        $arr = [];
+        while($row = $data->fetchArray(SQLITE3_ASSOC)){
+            $arr[] = $row;
+        }
+            
+        return $arr;
+    }
     
-    function getRec(){}
+    function getRec(){
+        $sql = "SELECT resps.id as id, recName, category.name as category, ingridients, direction,  datetime 
+        FROM resps, category WHERE category.id = resps.category ORDER BY resps.id DESC";
+        $res = $this->_db->query($sql);
+        
+        if(!$res){
+            return false;
+        } else {
+            return $this->db2arr($res);
+        }
+    }
     function delRec(){}
     
     function __destruct()
     {
         unset($this->_db);
     }
-    
-    // Safety functions
-    
     
 }
     

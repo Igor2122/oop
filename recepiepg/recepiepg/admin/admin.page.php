@@ -145,7 +145,16 @@
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>
          </div>
+         <?php 
+         $recp = new RecDB();        
+          $posts = $recp->getRec();
+          // print_r($posts);
+          foreach($posts as $post){
+            echo $post['recName'];
+            echo 'hello';
+          };
          
+         ?>
         <?= $message ?>
         <h2>Section title</h2>
             <div class="table-responsive">

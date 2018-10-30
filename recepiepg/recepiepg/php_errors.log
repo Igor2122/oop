@@ -150,3 +150,96 @@
 [30-Oct-2018 06:45:41 UTC] PHP   2. require() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:13
 [30-Oct-2018 06:45:41 UTC] PHP   3. RecDB->saveRec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/SaveRec.class.php:12
 [30-Oct-2018 06:45:41 UTC] PHP   4. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:63
+[30-Oct-2018 10:39:02 UTC] PHP Warning:  SQLite3::exec(): near "re": syntax error in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 63
+[30-Oct-2018 10:39:02 UTC] PHP Stack trace:
+[30-Oct-2018 10:39:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 10:39:02 UTC] PHP   2. require() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:13
+[30-Oct-2018 10:39:02 UTC] PHP   3. RecDB->saveRec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/SaveRec.class.php:12
+[30-Oct-2018 10:39:02 UTC] PHP   4. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:63
+[30-Oct-2018 11:16:17 UTC] PHP Warning:  SQLite3::query(): Unable to prepare statement: 1, no such column: source in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 79
+[30-Oct-2018 11:16:17 UTC] PHP Stack trace:
+[30-Oct-2018 11:16:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 11:16:17 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:150
+[30-Oct-2018 11:16:17 UTC] PHP   3. SQLite3->query() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:79
+[30-Oct-2018 11:18:41 UTC] PHP Warning:  SQLite3::query(): Unable to prepare statement: 1, no such column: source in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 79
+[30-Oct-2018 11:18:41 UTC] PHP Stack trace:
+[30-Oct-2018 11:18:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 11:18:41 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:150
+[30-Oct-2018 11:18:41 UTC] PHP   3. SQLite3->query() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:79
+[30-Oct-2018 11:19:48 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:19:48 UTC] PHP Stack trace:
+[30-Oct-2018 11:19:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 11:19:48 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:150
+[30-Oct-2018 11:19:48 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:83
+[30-Oct-2018 11:19:48 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:20:06 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:20:06 UTC] PHP Stack trace:
+[30-Oct-2018 11:20:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 11:20:06 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:150
+[30-Oct-2018 11:20:06 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:83
+[30-Oct-2018 11:20:06 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:20:36 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:20:36 UTC] PHP Stack trace:
+[30-Oct-2018 11:20:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 11:20:36 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:150
+[30-Oct-2018 11:20:36 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:83
+[30-Oct-2018 11:20:36 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:20:38 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:20:38 UTC] PHP Stack trace:
+[30-Oct-2018 11:20:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 11:20:38 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:150
+[30-Oct-2018 11:20:38 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:83
+[30-Oct-2018 11:20:38 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:54:17 UTC] PHP Warning:  SQLite3::exec(): table resps already exists in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 25
+[30-Oct-2018 11:54:17 UTC] PHP Stack trace:
+[30-Oct-2018 11:54:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 11:54:17 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:149
+[30-Oct-2018 11:54:17 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:25
+[30-Oct-2018 12:04:12 UTC] PHP Warning:  SQLite3::exec(): table resps already exists in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 25
+[30-Oct-2018 12:04:12 UTC] PHP Stack trace:
+[30-Oct-2018 12:04:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:04:12 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:149
+[30-Oct-2018 12:04:12 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:25
+[30-Oct-2018 12:05:51 UTC] PHP Warning:  SQLite3::exec(): table categ already exists in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 45
+[30-Oct-2018 12:05:51 UTC] PHP Stack trace:
+[30-Oct-2018 12:05:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:05:51 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:10
+[30-Oct-2018 12:05:51 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:45
+[30-Oct-2018 12:07:53 UTC] PHP Warning:  SQLite3::exec(): no such table: category in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 39
+[30-Oct-2018 12:07:53 UTC] PHP Stack trace:
+[30-Oct-2018 12:07:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:07:53 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:10
+[30-Oct-2018 12:07:53 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:39
+[30-Oct-2018 12:08:25 UTC] PHP Warning:  SQLite3::exec(): table resps already exists in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 25
+[30-Oct-2018 12:08:25 UTC] PHP Stack trace:
+[30-Oct-2018 12:08:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:08:25 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:149
+[30-Oct-2018 12:08:25 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:25
+[30-Oct-2018 12:12:27 UTC] PHP Warning:  SQLite3::exec(): table resps already exists in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 25
+[30-Oct-2018 12:12:27 UTC] PHP Stack trace:
+[30-Oct-2018 12:12:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:12:27 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:149
+[30-Oct-2018 12:12:27 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:25
+[30-Oct-2018 12:13:25 UTC] PHP Warning:  SQLite3::exec(): table resps already exists in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 25
+[30-Oct-2018 12:13:25 UTC] PHP Stack trace:
+[30-Oct-2018 12:13:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:13:25 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:149
+[30-Oct-2018 12:13:25 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:25
+[30-Oct-2018 12:16:00 UTC] PHP Warning:  SQLite3::exec(): table resps already exists in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 25
+[30-Oct-2018 12:16:00 UTC] PHP Stack trace:
+[30-Oct-2018 12:16:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:16:00 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:149
+[30-Oct-2018 12:16:00 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:25
+[30-Oct-2018 12:18:18 UTC] PHP Warning:  SQLite3::exec(): table resps already exists in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 24
+[30-Oct-2018 12:18:18 UTC] PHP Stack trace:
+[30-Oct-2018 12:18:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:18:18 UTC] PHP   2. RecDB->__construct() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:149
+[30-Oct-2018 12:18:18 UTC] PHP   3. SQLite3->exec() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:24
+[30-Oct-2018 12:18:53 UTC] PHP Warning:  SQLite3::query(): Unable to prepare statement: 1, no such table: category in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 65
+[30-Oct-2018 12:18:53 UTC] PHP Stack trace:
+[30-Oct-2018 12:18:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0
+[30-Oct-2018 12:18:53 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:150
+[30-Oct-2018 12:18:53 UTC] PHP   3. SQLite3->query() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:65
+[30-Oct-2018 12:18:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php on line 152
+[30-Oct-2018 12:18:53 UTC] PHP Stack trace:
+[30-Oct-2018 12:18:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/admin/admin.page.php:0

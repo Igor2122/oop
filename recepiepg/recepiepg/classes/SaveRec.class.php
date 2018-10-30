@@ -13,7 +13,6 @@ if (empty($recName) && empty($ingridients) && empty($direction)) {
       $message = "Error Saving Data";
    } else {
       header("Location: admin.page.php");
-      $message = "Record Saved";
       exit;
    }
 }

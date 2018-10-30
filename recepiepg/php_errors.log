@@ -1,0 +1,48 @@
+[30-Oct-2018 11:24:36 UTC] PHP Fatal error:  Call to a member function getRec() on a non-object in /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php on line 26
+[30-Oct-2018 11:24:36 UTC] PHP Stack trace:
+[30-Oct-2018 11:24:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:25:21 UTC] PHP Fatal error:  Class 'RecDB' not found in /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php on line 26
+[30-Oct-2018 11:25:21 UTC] PHP Stack trace:
+[30-Oct-2018 11:25:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:26:19 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:26:19 UTC] PHP Stack trace:
+[30-Oct-2018 11:26:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:26:19 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:27
+[30-Oct-2018 11:26:19 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:83
+[30-Oct-2018 11:26:19 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:26:44 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:26:44 UTC] PHP Stack trace:
+[30-Oct-2018 11:26:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:26:44 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:27
+[30-Oct-2018 11:26:44 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:83
+[30-Oct-2018 11:26:44 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:28:56 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:28:56 UTC] PHP Stack trace:
+[30-Oct-2018 11:28:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:28:56 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:27
+[30-Oct-2018 11:28:56 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:84
+[30-Oct-2018 11:28:56 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:30:51 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:30:51 UTC] PHP Stack trace:
+[30-Oct-2018 11:30:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:30:51 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:27
+[30-Oct-2018 11:30:51 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:84
+[30-Oct-2018 11:30:51 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:30:54 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:30:54 UTC] PHP Stack trace:
+[30-Oct-2018 11:30:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:30:54 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:27
+[30-Oct-2018 11:30:54 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:84
+[30-Oct-2018 11:30:54 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:30:57 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:30:57 UTC] PHP Stack trace:
+[30-Oct-2018 11:30:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:30:57 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:27
+[30-Oct-2018 11:30:57 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:84
+[30-Oct-2018 11:30:57 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
+[30-Oct-2018 11:31:00 UTC] PHP Warning:  SQLite3Result::fetchArray() expects parameter 1 to be long, string given in /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php on line 69
+[30-Oct-2018 11:31:00 UTC] PHP Stack trace:
+[30-Oct-2018 11:31:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:0
+[30-Oct-2018 11:31:00 UTC] PHP   2. RecDB->getRec() /home/ubuntu/workspace/recepiepg/recepiepg/recepies.php:27
+[30-Oct-2018 11:31:00 UTC] PHP   3. RecDB->db2arr() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:84
+[30-Oct-2018 11:31:00 UTC] PHP   4. SQLite3Result->fetchArray() /home/ubuntu/workspace/recepiepg/recepiepg/classes/rec.calss.php:69
