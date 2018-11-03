@@ -12,38 +12,30 @@
     
     if(isset($_POST['upload'])){
         
-        
-        // path to upload folder 
-        $location = "img/" . basename($_FILES['image']['name']);
+        // $location = "img/" . basename($_FILES['image']['name']);
         
         $db = mysqli_connect($host, $usr, $pass, $dbname);
         
         $img = $_FILES['image']['name'];
         $text = $_POST['description'];
         
-        
-        $sql = "INSERT INTO posts(name, description) VALUES()";
-        
-        
+        // $img = 'test';
+        // $text = 'test description';
         
         
+        $sql = "INSERT INTO posts(name, description) VALUES('$img', '$text')";
         
         
-        
-        if (!$stmt = mysqli_prepare($db, $sql)){
-        return false; 
-    } else {
-        mysqli_stmt_bind_param($stmt, "ssii", $img, $text);
-        mysqli_stmt_execute($stmt); 
-        mysqli_stmt_close($stmt); 
-        return true;
-    }
+        mysqli_query($db, $sql);
         
         
         if(move_uploaded_file($_FILES['image']['name'], $location)){
             echo $msg = "Image Uploaded";
+            echo 'success!';
+            // exit;
         } else {
             echo $msg = " There was a problem ";
+            // exit;
         }
         
     }
