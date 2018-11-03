@@ -27,7 +27,7 @@
         echo $row['created_at']. "<br>";
     }
     
-    // fetching Assc object
+    // fetching  object
     while($row = $stmt->fetch()){
         echo "<br>";
         echo $row->title . "<br>";
