@@ -12,7 +12,7 @@
     
     if(isset($_POST['upload'])){
         
-        // $location = "img/" . basename($_FILES['image']['name']);
+        $location = "img/" . basename($_FILES['image']['name']);
         
         $db = mysqli_connect($host, $usr, $pass, $dbname);
         
@@ -29,16 +29,18 @@
         mysqli_query($db, $sql);
         
         
-        if(move_uploaded_file($_FILES['image']['name'], $location)){
+        if(move_uploaded_file($_FILES['image']['tmp_name'], $location)){
             echo $msg = "Image Uploaded";
             echo 'success!';
-            // exit;
+            echo $location;
         } else {
             echo $msg = " There was a problem ";
             // exit;
         }
         
     }
+    
+    
         
     
     
@@ -63,6 +65,21 @@
             <input type="text" cols="40" rows="4" name="description" placeholder="Description"><br>
             <input type="submit" value="Upload Image" name="upload">
 </form>
+
+    <?php 
+        
+        $db = mysqli_connect($host, $usr, $pass, $dbname);
+        $sql = "select * from posts";
+        $res = mysqli_query($db, $sql);
+        
+        while($row = mysqli_fetch_array($res)){
+            echo "<div>";
+                echo "<img src='img/".$row['name']."'>";
+                echo "<p>" . $row['description'] . "</p>";
+            echo "</div>";
+        }
+    
+    ?>
     </div>
 </body>
 </html>

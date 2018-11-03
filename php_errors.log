@@ -93,3 +93,7 @@ Stack trace:
 [03-Nov-2018 11:57:39 UTC] PHP Stack trace:
 [03-Nov-2018 11:57:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/imgUpload.php:0
 [03-Nov-2018 11:57:39 UTC] PHP   2. mysqli_stmt_close() /home/ubuntu/workspace/pdo/imgUpload.php:33
+[03-Nov-2018 12:57:37 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/pdo/imgUploadPrcd.php on line 75
+[03-Nov-2018 12:57:37 UTC] PHP Stack trace:
+[03-Nov-2018 12:57:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/pdo/imgUploadPrcd.php:0
+[03-Nov-2018 12:57:37 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/pdo/imgUploadPrcd.php:75
