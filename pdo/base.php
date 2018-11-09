@@ -17,26 +17,25 @@
     $stmt = $pdo->query('SELECT * FROM posts');
     
     # FETCHING DATA WITH ASSC-ARR & OBJ
-/*
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-        echo "<br>";
-        echo $row['id']. "<br>";
-        echo $row['title']. "<br>";
-        echo $row['author']. "<br>";
-        echo $row['body']. "<br>";
-        echo $row['created_at']. "<br>";
-    }
+
+    // while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    //     echo "<br>";
+    //     echo $row['id']. "<br>";
+    //     echo $row['title']. "<br>";
+    //     echo $row['author']. "<br>";
+    //     echo $row['body']. "<br>";
+    //     echo $row['created_at']. "<br>";
+    // }
     
-    // fetching  object
+    
+    // fetching with object
     while($row = $stmt->fetch()){
-        echo "<br>";
-        echo $row->title . "<br>";
-        echo $row->author . "<br>";
-        echo $row->body . "<br>";
-        echo $row->created_at . "<br>";
+        echo $row->name . "<hr>";
     }
     
-*/
+    
+    
+/**/
 
     # PREPARED STATEMENTS (prepare & execute)
 /*     

@@ -17,7 +17,7 @@
         $db = mysqli_connect($host, $usr, $pass, $dbname);
         
         $img = $_FILES['image']['name'];
-        $text = $_POST['description'];
+        
         
         // $img = 'test';
         // $text = 'test description';
